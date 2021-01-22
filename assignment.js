@@ -2,46 +2,60 @@
 
 // kilometerToMeter function:
 
-/**function kilometerToMeter(kilometer) {    
-    var meter = 1000; // We know 1 kilometer = 1000 meter
+function kilometerToMeter(kilometer) {
+    var meter = 1000;   // We know 1 kilometer = 1000 meter
     var result = kilometer * meter;
     return result;
 }
-var convertMeter = kilometerToMeter(5);
-console.log(convertMeter);  */
 
 
 // budgetCalculator function:
 
 function budgetCalculator(twoWatch, threePhone, fourLaptop) {
-    var watch = 50;
-    var phone = 100;
-    var laptop = 500;
+
+    var watch = 50;         // Here watch price is per 50 taka 
+    var phone = 100;        // Here phone price is per 100 taka 
+    var laptop = 500;       // Here laptop price is per 500 taka 
     var twoWatch = watch * 2;
-    var threephone = phone * 3;
+    var threePhone = phone * 3;
     var fourLaptop = laptop * 4;
-    var total = twoWatch + threephone + fourLaptop;
+    var total = twoWatch + threePhone + fourLaptop;
     return total;
 }
-// var totalPrice = budgetCalculator();
-// console.log(totalPrice);
 
+//hotelCost function
 
-/**
- //megaFriend
+function hotelCost(hotelcost) {
+    var hotelCostArray = [];
+    var oneToTen = 100;
+    var elevenToTwenty = 80;
+    var twentyOneToAny = 50;
+    for (var i = 0; i < hotelCostArray.length; i++) {
+        if (hotelCostArray <= 10) {
+            var oneToTen = 100 * hotelCostArray.length;
+        } else if (hotelCostArray > 20) {
+            var elevenToTwenty = 80 * hotelCostArray.length;
 
-function megaFriend(names) {
-   var maxword = names[0];
-   var largestName = "";
-   for (var i = 0; i < names.length; i++) {
-       var elements = names[i];
-       if (elements.length > names.length) {
-           maxword = elements;
-           largestName = maxword;
-       }
-       return largestName;
-   }
+        } else {
+            var twentyOneToAny = 50 * hotelCostArray.length;
+        }
+        var totalCostPrice = oneToTen + elevenToTwenty + twentyOneToAny;
+        return totalCostPrice;
+    }
 }
-var friends = ["Aminul", "Sohel", "Selim", "Shohidul", "Sanowar"];
-console.log(friends);
- */
+
+//megaFriend function
+
+var names = ["Aminul", "rana", "selim", "pop", "kobir"];
+function megaFriend(names) {
+    var maxword = names[0];
+    var largestName = " ";
+    for (var i = 0; i < names.length; i++) {
+        var elements = names[i];
+        if (elements.length > names.length) {
+            maxword = elements;
+            largestName = maxword;
+        }
+        return largestName;
+    }
+}
